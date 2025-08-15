@@ -10,6 +10,7 @@ const authRoutes = require('./routes/auth');
 const approvalRoutes = require('./routes/approvals');
 const userRoutes = require('./routes/users');
 const notificationRoutes = require('./routes/notifications');
+const attachmentRoutes = require('./routes/attachments');
 
 const app = express();
 const server = http.createServer(app);
@@ -59,6 +60,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/approvals', approvalRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/attachments', attachmentRoutes);
 
 // 헬스 체크
 app.get('/api/health', (req, res) => {

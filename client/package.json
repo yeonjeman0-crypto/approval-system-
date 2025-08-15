@@ -16,6 +16,7 @@
     "axios": "^1.6.3",
     "socket.io-client": "^4.7.4",
     "moment": "^2.29.4",
+    "dayjs": "^1.11.10",
     "react-query": "^3.39.3",
     "@types/node": "^16.18.68",
     "sass": "^1.69.5"

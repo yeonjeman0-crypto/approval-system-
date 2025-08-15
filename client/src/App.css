@@ -1,0 +1,306 @@
+/* App.css - 전역 스타일 */
+
+.App {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+/* 안트 디자인 커스터마이징 */
+.ant-layout {
+  background: #f0f2f5;
+}
+
+.ant-layout-content {
+  background: #f0f2f5 !important;
+}
+
+/* 로딩 스피너 스타일 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 결재 상태 배지 스타일 */
+.status-pending {
+  background-color: #faad14;
+  border-color: #faad14;
+}
+
+.status-approved {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+.status-rejected {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.status-in-progress {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+/* 우선순위 배지 스타일 */
+.priority-high {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.priority-normal {
+  background-color: #d9d9d9;
+  border-color: #d9d9d9;
+  color: #000;
+}
+
+.priority-low {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+/* 카드 호버 효과 */
+.hover-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s;
+}
+
+/* 테이블 행 호버 효과 */
+.ant-table-tbody > tr:hover > td {
+  background: #e6f7ff !important;
+}
+
+/* 통계 카드 스타일 */
+.stat-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-card .ant-statistic-title {
+  margin-bottom: 8px;
+}
+
+.stat-card .ant-statistic-content {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 승인 단계 스타일 */
+.approval-steps .ant-steps-item-process .ant-steps-item-icon {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.approval-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+.approval-steps .ant-steps-item-error .ant-steps-item-icon {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    height: 100vh;
+    left: 0;
+    z-index: 999;
+  }
+  
+  .ant-layout-content {
+    margin-left: 0 !important;
+  }
+  
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .ant-table {
+    font-size: 12px;
+  }
+  
+  .ant-table-thead > tr > th {
+    padding: 8px 4px;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+  }
+}
+
+/* 파일 업로드 영역 스타일 */
+.upload-area {
+  border: 2px dashed #d9d9d9;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.upload-area:hover {
+  border-color: #1890ff;
+}
+
+.upload-area.dragover {
+  border-color: #1890ff;
+  background-color: #e6f7ff;
+}
+
+/* 파일 아이콘 스타일 */
+.file-icon {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+/* 알림 연결 상태 표시 */
+.connection-status {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.connection-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  animation: pulse 2s infinite;
+}
+
+.connection-dot.connected {
+  background-color: #52c41a;
+}
+
+.connection-dot.disconnected {
+  background-color: #ff4d4f;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 승인 이력 타임라인 스타일 */
+.approval-timeline .ant-timeline-item-content {
+  margin-left: 16px;
+}
+
+.approval-timeline .ant-timeline-item-head {
+  background-color: #fff;
+}
+
+/* 결재 상세 정보 스타일 */
+.approval-description .ant-descriptions-item-label {
+  font-weight: 600;
+  color: #262626;
+}
+
+.approval-description .ant-descriptions-item-content {
+  color: #595959;
+}
+
+/* 프린트 스타일 */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .ant-layout-sider {
+    display: none !important;
+  }
+  
+  .ant-layout-content {
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+}
+
+/* 커스텀 스크롤바 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* 애니메이션 */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 해운업계 테마 색상 */
+.maritime-theme {
+  --primary-color: #1890ff;
+  --secondary-color: #13c2c2;
+  --accent-color: #722ed1;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #ff4d4f;
+  --text-color: #262626;
+  --text-secondary: #595959;
+  --background-color: #f0f2f5;
+}
+
+/* 선박 아이콘 회전 애니메이션 */
+.ship-icon-animate {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
